@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- 60px tile with 1px horizontal and vertical lines -->
+    <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <!-- Horizontal line -->
+      <line x1="0" y1="0" x2="60" y2="0" stroke="#1A3A5C" stroke-width="1" stroke-opacity="0.08"/>
+      <!-- Vertical line -->
+      <line x1="0" y1="0" x2="0" y2="60" stroke="#1A3A5C" stroke-width="1" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- Alice Blue base -->
+  <rect width="1920" height="1080" fill="#F2F6FB"/>
+
+  <!-- Grid overlay -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+</svg>

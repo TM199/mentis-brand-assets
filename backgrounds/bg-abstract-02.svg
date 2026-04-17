@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Alice Blue base -->
+  <rect width="1920" height="1080" fill="#F2F6FB"/>
+
+  <!-- Large Deep Space Blue rounded shape, bottom-right dominant, 90% opacity -->
+  <ellipse cx="1480" cy="900" rx="700" ry="520" fill="#1A3A5C" fill-opacity="0.90" transform="rotate(-15 1480 900)"/>
+
+  <!-- Small Crayola Blue circle accent, top-left -->
+  <circle cx="180" cy="160" r="90" fill="#2878E8" fill-opacity="0.80"/>
+</svg>

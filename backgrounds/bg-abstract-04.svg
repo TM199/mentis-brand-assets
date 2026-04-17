@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Alice Blue base -->
+  <rect width="1920" height="1080" fill="#F2F6FB"/>
+
+  <!-- 5 concentric arcs, Crayola Blue, increasing opacities outward-in -->
+  <!-- Arc 1: outermost, 8% -->
+  <path d="M 960 1080 A 900 900 0 0 1 60 540 A 900 900 0 0 1 960 -360" fill="none" stroke="#2878E8" stroke-width="120" stroke-opacity="0.08"/>
+
+  <!-- Arc 2: 14% -->
+  <path d="M 960 1080 A 720 720 0 0 1 240 540 A 720 720 0 0 1 960 -180" fill="none" stroke="#2878E8" stroke-width="100" stroke-opacity="0.14"/>
+
+  <!-- Arc 3: 20% -->
+  <path d="M 960 1000 A 540 540 0 0 1 420 540 A 540 540 0 0 1 960 80" fill="none" stroke="#2878E8" stroke-width="80" stroke-opacity="0.20"/>
+
+  <!-- Arc 4: 28% -->
+  <path d="M 960 920 A 360 360 0 0 1 600 540 A 360 360 0 0 1 960 160" fill="none" stroke="#2878E8" stroke-width="60" stroke-opacity="0.28"/>
+
+  <!-- Arc 5: innermost, 40% -->
+  <path d="M 960 840 A 180 180 0 0 1 780 540 A 180 180 0 0 1 960 240" fill="none" stroke="#2878E8" stroke-width="40" stroke-opacity="0.40"/>
+</svg>

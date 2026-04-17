@@ -1,0 +1,39 @@
+{
+  "system": "single-style",
+  "primary": {
+    "recraftStyleId": "b143416b-1c5c-4e7b-9598-d68262969f98",
+    "recraftModel": "recraftv3",
+    "baseStyle": "vector_illustration",
+    "baseSubstyle": "editorial",
+    "chosenCandidate": "01-v2 (palette-corrected editorial vector)",
+    "referenceImage": "brand-kit/01-raw-assets/illustrations/_candidates/candidate-01-v2.svg",
+    "register": "Thin clean vector outlines, editorial precision, Pilot.com consulting-grade. Flat shapes. Muted Mentis palette.",
+    "register_rationale": "Matches Pilot.com benchmark. Scales cleanly at both LinkedIn-post size (1200x1200) and hero/showcase size. Reads 'direct, rigorous, quietly confident'. Native SVG output, no raster quality loss.",
+    "useFor": [
+      "All 10 Phase 2 illustrations (hero, process, three-layer-system, signal-detection, team-at-work, outcome, consultation, proposal, weekly-report, partnership)",
+      "LinkedIn post illustrations",
+      "Article in-line illustrations",
+      "Presentation slide illustrations",
+      "Infographic supporting graphics",
+      "Brand book illustration pages"
+    ]
+  },
+  "discarded": [
+    {
+      "recraftStyleId": "778863d9-da9a-4ab9-bda1-291cec937232",
+      "baseCandidate": "candidate-04 (digital_illustration/grain_20)",
+      "reason": "Raster with grain drifts from Pilot.com benchmark — reads Intercom/Notion rather than consulting-grade. Soft when scaled. Replaced by 01-v2."
+    },
+    {
+      "recraftStyleId": "915f3413-38fc-4ede-81e2-9b1c5ef230c8",
+      "baseCandidate": "candidate-06 (digital_illustration/handmade_3d)",
+      "reason": "Clay/3D aesthetic undercuts rigour signal. Warmer/feature moments will be covered by Nano Banana Pro photography instead."
+    }
+  ],
+  "lockedAt": "2026-04-17",
+  "rules": {
+    "default": "Every illustration generation in Phase 2 MUST pass styleID='b143416b-1c5c-4e7b-9598-d68262969f98' to mcp__recraft__generate_image. Do NOT vary this ID.",
+    "palette_steering": "Downstream prompts MUST include explicit Mentis palette cues: 'Deep Space Blue #1A3A5C, Crayola Blue #2878E8, Alice Blue #F2F6FB background, Sky Reflection #8AABC8 mid-tone, Harvest Gold #D4980F accent only (<5%). NO orange, NO coral, NO peach, NO warm skin-tone clothing.' Recraft styles drift from palette without explicit cues.",
+    "no_improvisation": "If a scene doesn't fit this style, stop and ask the user. Do not create additional styles."
+  }
+}

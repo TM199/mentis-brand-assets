@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Alice Blue base -->
+  <rect width="1920" height="1080" fill="#F2F6FB"/>
+
+  <!-- 3 overlapping circles forming Venn-like composition, centred on canvas -->
+  <!-- Deep Space Blue circle, offset left -->
+  <circle cx="820" cy="540" r="340" fill="#1A3A5C" fill-opacity="0.20"/>
+
+  <!-- Crayola Blue circle, offset right -->
+  <circle cx="1100" cy="540" r="340" fill="#2878E8" fill-opacity="0.20"/>
+
+  <!-- Sky Reflection circle, offset down-centre -->
+  <circle cx="960" cy="730" r="340" fill="#8AABC8" fill-opacity="0.20"/>
+</svg>

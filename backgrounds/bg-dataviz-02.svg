@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Subtle grid pattern -->
+    <pattern id="bgGrid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="80" y2="0" stroke="#1A3A5C" stroke-width="1" stroke-opacity="0.06"/>
+      <line x1="0" y1="0" x2="0" y2="80" stroke="#1A3A5C" stroke-width="1" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Alice Blue base -->
+  <rect width="1920" height="1080" fill="#F2F6FB"/>
+
+  <!-- Subtle grid behind curves -->
+  <rect width="1920" height="1080" fill="url(#bgGrid)"/>
+
+  <!--
+    Two intersecting smooth curves spanning full canvas width.
+    Curve 1 (Deep Space Blue solid 2px): starts high-left, dips, rises to right
+    Curve 2 (Crayola Blue dashed 2px): starts low-left, rises steeply, crosses curve 1
+  -->
+
+  <!-- Curve 1: Deep Space Blue, solid -->
+  <path d="M 0,300 C 300,260 600,700 960,540 S 1500,280 1920,420"
+        fill="none" stroke="#1A3A5C" stroke-width="2.5" stroke-opacity="0.90"/>
+
+  <!-- Curve 2: Crayola Blue, dashed -->
+  <path d="M 0,780 C 320,740 640,360 960,500 S 1400,660 1920,320"
+        fill="none" stroke="#2878E8" stroke-width="2.5" stroke-opacity="0.90"
+        stroke-dasharray="16 10"/>
+</svg>

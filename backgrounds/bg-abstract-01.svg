@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Alice Blue base -->
+  <rect width="1920" height="1080" fill="#F2F6FB"/>
+
+  <!-- Large Crayola Blue blob top-left, 15% opacity -->
+  <ellipse cx="420" cy="320" rx="480" ry="380" fill="#2878E8" fill-opacity="0.15" transform="rotate(-18 420 320)"/>
+
+  <!-- Large Crayola Blue blob bottom-right, 15% opacity -->
+  <ellipse cx="1580" cy="820" rx="520" ry="400" fill="#2878E8" fill-opacity="0.15" transform="rotate(12 1580 820)"/>
+
+  <!-- Mid Crayola Blue blob centre-right, 15% opacity -->
+  <ellipse cx="1200" cy="480" rx="340" ry="280" fill="#2878E8" fill-opacity="0.15" transform="rotate(-30 1200 480)"/>
+
+  <!-- Small Sky Reflection accent blob lower-left -->
+  <ellipse cx="280" cy="780" rx="180" ry="140" fill="#8AABC8" fill-opacity="0.25" transform="rotate(8 280 780)"/>
+</svg>

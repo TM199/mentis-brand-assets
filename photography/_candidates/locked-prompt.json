@@ -1,0 +1,28 @@
+{
+  "lockedAt": "2026-04-17",
+  "chosenCandidate": 1,
+  "referenceImage": "brand-kit/01-raw-assets/photography/_candidates/candidate-01.jpg",
+  "notes": "Locked template for all Phase 2 photography (Task 13). Eye-level 50mm f/2.0 is the reusable base — it encodes the reusable lighting/colour-grade/office-vibe cleanest. Subject descriptor ({{SUBJECT}}) varies per shot; everything else holds constant.",
+  "template": {
+    "base_subject": "British man in his late 40s, greying temples and salt-and-pepper hair, slight crow's feet at eyes, wearing a well-fitted navy blue suit jacket over a white open-collar shirt, no tie",
+    "replaceable_subject_slot": "{{SUBJECT}}",
+    "environment": "modern but not glossy London office — glass partitions visible in background, MacBook on the desk, printed pipeline document, coffee cup",
+    "lighting": "Natural afternoon window light from the side casting soft directional light across subject's face with warm neutral highlights and cool blue shadows",
+    "camera": "Sony A7IV, 50mm f/2.0 lens, ISO 200, shallow depth of field with background softly blurred, eye-level straight-on",
+    "colour_grade": "Natural white balance, slightly desaturated overall, cool blue in shadows (#1A3A5C), alice blue highlights (#F2F6FB), warm neutral skin tones",
+    "style_cue": "Documentary editorial photography style, like a Financial Times executive profile",
+    "realism_enforcement": "Visible skin texture including pores, natural skin tone variation, slight age lines. No retouching, no beauty filter, no airbrushing. Do not beautify or alter facial features.",
+    "hard_rules": "Never pure black, never pure white. Cool blue shadows, warm neutral highlights."
+  },
+  "reusable_prompt_template": {
+    "prompt": "Editorial corporate photograph of {{SUBJECT}}, in a modern but not glossy London office — glass partitions visible in background, MacBook on desk, printed pipeline document, coffee cup. Visible skin texture including pores, natural skin tone variation, slight age lines. Natural afternoon window light from the side casting soft directional light with warm neutral highlights and cool blue shadows. Background slightly blurred — muted navy and light blue office tones. Shot on Sony A7IV, 50mm f/2.0 lens, ISO 200, shallow depth of field. Natural white balance, slightly desaturated overall colour grade, cool blue in shadows, warm neutral in skin highlights. No retouching, no beauty filter, no airbrushing. Do not beautify or alter facial features. Documentary editorial photography style, like a Financial Times executive profile. Colour palette: deep navy shadows (#1A3A5C), alice blue highlights (#F2F6FB), warm neutral skin tones. Never pure black, never pure white.",
+    "negative_prompt": "plastic skin, airbrushed texture, CGI rendering, smooth porcelain skin, beauty filter, Instagram filter, over-saturated colours, studio backdrop, stock photography pose, cheesy smile, perfect symmetry, digital painting, illustration, anime, cartoon, magazine cover retouching, glamour lighting, ring light catchlights, selfie angle, wide-angle distortion",
+    "api_parameters": {
+      "resolution": "4K",
+      "output_format": "jpg",
+      "aspect_ratio_default": "3:2",
+      "aspect_ratio_notes": "Override per shot. Use 16:9 for banners/heroes, 4:3 for editorial spreads, 3:2 for portraits, 1:1 for LinkedIn square."
+    }
+  },
+  "usage": "For each Task 13 photo, copy reusable_prompt_template, substitute {{SUBJECT}} with the specific subject descriptor, optionally override aspect_ratio, save to /Users/trisdenmills/.claude/skills/nano-banana-images/prompts/mentis-photo-{subject}.json, run generate_key.py. Do NOT alter the lighting, camera, or colour grade directives."
+}

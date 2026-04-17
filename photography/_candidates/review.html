@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentis — Photography Style Candidates (Task 7)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #F2F6FB;
+      color: #0F2237;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      padding: 48px;
+      min-height: 100vh;
+    }
+
+    .page-header {
+      margin-bottom: 40px;
+    }
+
+    .page-title {
+      font-family: 'Fraunces', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #0F2237;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .page-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #0F2237;
+      opacity: 0.65;
+      margin-top: 8px;
+    }
+
+    .candidates-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1760px;
+    }
+
+    .candidate-card {
+      background-color: #EBF1F9;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .candidate-image-wrap {
+      width: 100%;
+      line-height: 0;
+    }
+
+    .candidate-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .candidate-label {
+      padding: 16px 20px 18px;
+    }
+
+    .candidate-number {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #0F2237;
+      margin-bottom: 4px;
+    }
+
+    .candidate-config {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #0F2237;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    .candidate-config .detail {
+      display: inline-block;
+      margin-right: 16px;
+    }
+
+    .candidate-config .detail-label {
+      font-weight: 500;
+      opacity: 0.7;
+    }
+
+    .candidate-dims {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      color: #0F2237;
+      opacity: 0.5;
+      margin-top: 6px;
+    }
+
+    .footer {
+      margin-top: 48px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: #0F2237;
+      opacity: 0.45;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <h1 class="page-title">Mentis &#8212; Photography Style Candidates (Task 7). Pick 1&#8211;4.</h1>
+    <p class="page-subtitle">Subject held constant across all candidates. Only camera angle + focal length varies. Style not locked &#8212; pick your preferred candidate first.</p>
+  </header>
+
+  <div class="candidates-grid">
+
+    <div class="candidate-card">
+      <div class="candidate-image-wrap">
+        <img src="candidate-01.jpg" alt="Candidate 01 — Eye-level straight-on, 50mm f/2.0, 3:2">
+      </div>
+      <div class="candidate-label">
+        <div class="candidate-number">01</div>
+        <div class="candidate-config">
+          <span class="detail"><span class="detail-label">Angle:</span> Eye-level straight-on</span>
+          <span class="detail"><span class="detail-label">Lens:</span> 50mm f/2.0</span>
+          <span class="detail"><span class="detail-label">Ratio:</span> 3:2</span>
+        </div>
+        <div class="candidate-dims">5056 &times; 3392 px &nbsp;&middot;&nbsp; 8.2 MB &nbsp;&middot;&nbsp; 4K</div>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="candidate-image-wrap">
+        <img src="candidate-02.jpg" alt="Candidate 02 — Slight low-angle, 35mm f/2.8, 16:9">
+      </div>
+      <div class="candidate-label">
+        <div class="candidate-number">02</div>
+        <div class="candidate-config">
+          <span class="detail"><span class="detail-label">Angle:</span> Slight low-angle, looking up</span>
+          <span class="detail"><span class="detail-label">Lens:</span> 35mm f/2.8 (wider environmental)</span>
+          <span class="detail"><span class="detail-label">Ratio:</span> 16:9</span>
+        </div>
+        <div class="candidate-dims">5504 &times; 3072 px &nbsp;&middot;&nbsp; 8.0 MB &nbsp;&middot;&nbsp; 4K</div>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="candidate-image-wrap">
+        <img src="candidate-03.jpg" alt="Candidate 03 — Over-the-shoulder, 50mm f/2.0, 4:3">
+      </div>
+      <div class="candidate-label">
+        <div class="candidate-number">03</div>
+        <div class="candidate-config">
+          <span class="detail"><span class="detail-label">Angle:</span> Over-the-shoulder, past subject to document</span>
+          <span class="detail"><span class="detail-label">Lens:</span> 50mm f/2.0</span>
+          <span class="detail"><span class="detail-label">Ratio:</span> 4:3</span>
+        </div>
+        <div class="candidate-dims">4800 &times; 3584 px &nbsp;&middot;&nbsp; 8.2 MB &nbsp;&middot;&nbsp; 4K</div>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="candidate-image-wrap">
+        <img src="candidate-04.jpg" alt="Candidate 04 — Strict side profile, 85mm f/2.0, 3:2">
+      </div>
+      <div class="candidate-label">
+        <div class="candidate-number">04</div>
+        <div class="candidate-config">
+          <span class="detail"><span class="detail-label">Angle:</span> Strict side profile, subject looking left</span>
+          <span class="detail"><span class="detail-label">Lens:</span> 85mm f/2.0</span>
+          <span class="detail"><span class="detail-label">Ratio:</span> 3:2</span>
+        </div>
+        <div class="candidate-dims">5056 &times; 3392 px &nbsp;&middot;&nbsp; 8.0 MB &nbsp;&middot;&nbsp; 4K</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    Task 7 &nbsp;&middot;&nbsp; Mentis brand kit &nbsp;&middot;&nbsp; Generated via Kie.ai nano-banana-2 &nbsp;&middot;&nbsp; Style not locked &mdash; user selection required before Step 5
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Alice Blue base -->
+  <rect width="1200" height="800" fill="#F2F6FB"/>
+
+  <!--
+    4×3 grid of isometric small squares (flat top faces only — tile appearance).
+    Isometric tile: width 120, "height" 60 (2:1 ratio).
+    Columns offset by 60px x, 30px y per step.
+    Row offset: 60px x negative, 30px y per step.
+    Opacities vary across grid for depth.
+    Palette: Deep Space Blue / Crayola Blue / Sky Reflection
+  -->
+
+  <!-- Define tile colours and opacities by position (col, row) -->
+  <!-- Row 0 (top) -->
+  <polygon points="380,160 500,130 620,160 500,190" fill="#1A3A5C" fill-opacity="0.55"/>
+  <polygon points="500,130 620,100 740,130 620,160" fill="#2878E8" fill-opacity="0.60"/>
+  <polygon points="620,100 740,70 860,100 740,130" fill="#8AABC8" fill-opacity="0.50"/>
+  <polygon points="740,70 860,40 980,70 860,100" fill="#1A3A5C" fill-opacity="0.40"/>
+
+  <!-- Row 1 -->
+  <polygon points="320,220 440,190 560,220 440,250" fill="#2878E8" fill-opacity="0.45"/>
+  <polygon points="440,190 560,160 680,190 560,220" fill="#1A3A5C" fill-opacity="0.65"/>
+  <polygon points="560,160 680,130 800,160 680,190" fill="#2878E8" fill-opacity="0.70"/>
+  <polygon points="680,130 800,100 920,130 800,160" fill="#8AABC8" fill-opacity="0.55"/>
+
+  <!-- Row 2 (bottom) -->
+  <polygon points="260,280 380,250 500,280 380,310" fill="#8AABC8" fill-opacity="0.40"/>
+  <polygon points="380,250 500,220 620,250 500,280" fill="#2878E8" fill-opacity="0.50"/>
+  <polygon points="500,220 620,190 740,220 620,250" fill="#1A3A5C" fill-opacity="0.75"/>
+  <polygon points="620,190 740,160 860,190 740,220" fill="#2878E8" fill-opacity="0.55"/>
+
+  <!-- Left faces (slightly darker treatment — same colour, lower opacity) -->
+  <!-- Row 0 -->
+  <polygon points="380,160 500,190 500,250 380,220" fill="#1A3A5C" fill-opacity="0.30"/>
+  <polygon points="500,130 620,160 620,220 500,190" fill="#2878E8" fill-opacity="0.30"/>
+  <polygon points="620,100 740,130 740,190 620,160" fill="#8AABC8" fill-opacity="0.30"/>
+  <polygon points="740,70 860,100 860,160 740,130" fill="#1A3A5C" fill-opacity="0.25"/>
+
+  <!-- Row 1 -->
+  <polygon points="320,220 440,250 440,310 320,280" fill="#2878E8" fill-opacity="0.25"/>
+  <polygon points="440,190 560,220 560,280 440,250" fill="#1A3A5C" fill-opacity="0.35"/>
+  <polygon points="560,160 680,190 680,250 560,220" fill="#2878E8" fill-opacity="0.35"/>
+  <polygon points="680,130 800,160 800,220 680,190" fill="#8AABC8" fill-opacity="0.30"/>
+
+  <!-- Row 2 -->
+  <polygon points="260,280 380,310 380,370 260,340" fill="#8AABC8" fill-opacity="0.22"/>
+  <polygon points="380,250 500,280 500,340 380,310" fill="#2878E8" fill-opacity="0.28"/>
+  <polygon points="500,220 620,250 620,310 500,280" fill="#1A3A5C" fill-opacity="0.40"/>
+  <polygon points="620,190 740,220 740,280 620,250" fill="#2878E8" fill-opacity="0.30"/>
+</svg>

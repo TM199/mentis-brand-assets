@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Alice Blue top to Sky Reflection bottom -->
+    <linearGradient id="subtleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2F6FB"/>
+      <stop offset="100%" stop-color="#8AABC8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-canvas subtle gradient -->
+  <rect width="1920" height="1080" fill="url(#subtleGrad)"/>
+
+  <!-- Harvest Gold corner accent, bottom-right — small triangle respecting 5% rule -->
+  <!-- Triangle area ~28000px2 vs canvas ~2073600px2 = ~1.35% -->
+  <polygon points="1920,860 1920,1080 1680,1080" fill="#D4980F" fill-opacity="0.55"/>
+</svg>

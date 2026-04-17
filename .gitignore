@@ -1,0 +1,8 @@
+_raw-from-recraft/
+thumb-*.jpg
+thumb-*.png
+*_preview.png
+*_preview.jpg
+preview-*.jpg
+preview-*.png
+_candidates/*_preview*

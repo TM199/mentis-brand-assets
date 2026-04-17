@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mentis — Phase 2 Master Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#F2F6FB; --ink:#0F2237; --navy:#1A3A5C; --blue:#2878E8; --gold:#D4980F; --sky:#8AABC8; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: Inter, sans-serif; padding: 48px; line-height: 1.5; }
+    header { max-width: 960px; margin-bottom: 64px; }
+    header .tag { display: inline-block; padding: 4px 10px; border: 1px solid var(--navy); border-radius: 99px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85; margin-bottom: 16px; }
+    h1 { font-family: Fraunces, serif; font-weight: 600; font-size: 3rem; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 12px; }
+    header p { font-size: 16px; opacity: 0.85; max-width: 65ch; }
+    section { margin-bottom: 72px; }
+    section h2 { font-family: Fraunces, serif; font-weight: 500; font-size: 1.65rem; letter-spacing: -0.01em; margin-bottom: 6px; }
+    section .count { font-size: 13px; opacity: 0.85; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 24px; color: var(--navy); }
+    .grid { display: grid; gap: 16px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-5 { grid-template-columns: repeat(5, 1fr); }
+    .grid-6 { grid-template-columns: repeat(6, 1fr); }
+    .cell { background: rgba(255,255,255,0.4); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .cell.icon-cell { align-items: center; padding: 20px 12px; }
+    .cell img, .cell object { width: 100%; height: auto; display: block; border-radius: 6px; }
+    .icon-cell img { width: 48px; height: 48px; }
+    .label { font-size: 12px; opacity: 0.85; }
+    .sublabel { font-size: 10px; opacity: 0.6; text-transform: lowercase; }
+    hr { border: 0; height: 1px; background: var(--sky); margin: 48px 0; opacity: 0.4; }
+    .palette { display: flex; gap: 12px; margin-top: 16px; }
+    .swatch { display: flex; flex-direction: column; gap: 6px; align-items: center; font-size: 10px; }
+    .swatch .chip { width: 56px; height: 56px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.05); }
+    a { color: var(--navy); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tag">Phase 2 — Raw Asset Library</div>
+    <h1>Mentis — everything we've made.</h1>
+    <p>24 icons, 10 illustrations, 12 backgrounds, 8 photographs, 4 flat-lays. All locked to the Mentis palette (below). Product mockups were removed — Mentis is a service, not SaaS.</p>
+    <div class="palette">
+      <div class="swatch"><div class="chip" style="background:#1A3A5C"></div>#1A3A5C</div>
+      <div class="swatch"><div class="chip" style="background:#2878E8"></div>#2878E8</div>
+      <div class="swatch"><div class="chip" style="background:#D4980F"></div>#D4980F</div>
+      <div class="swatch"><div class="chip" style="background:#F2F6FB;border-color:#ccc"></div>#F2F6FB</div>
+      <div class="swatch"><div class="chip" style="background:#8AABC8"></div>#8AABC8</div>
+      <div class="swatch"><div class="chip" style="background:#0F2237"></div>#0F2237</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Icons</h2>
+    <div class="count">24 · Lucide · #1A3A5C · 2px stroke</div>
+    <div class="grid grid-6" id="icons"></div>
+  </section>
+
+  <section>
+    <h2>Illustrations</h2>
+    <div class="count">10 · Recraft v3 vector editorial style b143416b · palette-corrected</div>
+    <div class="grid grid-5" id="illustrations"></div>
+  </section>
+
+  <section>
+    <h2>Backgrounds</h2>
+    <div class="count">12 · hand-coded SVG · abstracts, grids, gradients, isometrics, data-viz</div>
+    <div class="grid grid-4" id="backgrounds"></div>
+  </section>
+
+  <section>
+    <h2>Photography</h2>
+    <div class="count">4 · Nano Banana Pro @ 4K · warm Pilot.com register, diverse cast, genuine smiles</div>
+    <div class="grid grid-4" id="photography"></div>
+  </section>
+
+  <section>
+    <h2>Flat-lays</h2>
+    <div class="count">4 · Nano Banana Pro @ 4K · editorial overhead still-life</div>
+    <div class="grid grid-4" id="flatlays"></div>
+  </section>
+
+<script>
+const ICONS = ['pipeline','signal','meeting','contact','research','campaign','report','dashboard','message','call','email','calendar','search','filter','chart-up','chart-down','target','handshake','briefcase','document','checkmark','warning','insight','team'];
+const ILLUS = ['hero','process','three-layer-system','signal-detection','team-at-work','outcome','consultation','proposal','weekly-report','partnership'];
+const BGS = ['abstract-01','abstract-02','abstract-03','abstract-04','grid-dots','grid-lines','gradient-mesh-01','gradient-mesh-02','isometric-01','isometric-02','dataviz-01','dataviz-02'];
+const PHOTOS = [
+  ['photo-director-confident-01','director confident · South Asian woman, City view — 4:5'],
+  ['photo-meeting-warmth-01','meeting warmth · 3-person, East Asian woman leading — 16:9'],
+  ['photo-team-celebration-01','team celebration · 4-person diverse — 16:9'],
+  ['photo-walking-london-01','walking london · 2-person, Shard backdrop — 16:9']
+];
+const FLATLAYS = [
+  ['flatlay-business-card','business card'],
+  ['flatlay-letterhead','letterhead'],
+  ['flatlay-folder','folder'],
+  ['flatlay-pitch-book','pitch book']
+];
+const el = id => document.getElementById(id);
+ICONS.forEach(name => el('icons').insertAdjacentHTML('beforeend',
+  `<div class="cell icon-cell"><img src="icons/icon-${name}.svg" alt="${name}"><div class="label">${name}</div></div>`));
+ILLUS.forEach(name => el('illustrations').insertAdjacentHTML('beforeend',
+  `<div class="cell"><img src="illustrations/illus-${name}.svg" alt="${name}"><div class="label">${name}</div></div>`));
+BGS.forEach(name => el('backgrounds').insertAdjacentHTML('beforeend',
+  `<div class="cell"><img src="backgrounds/bg-${name}.svg" alt="${name}" style="aspect-ratio:16/9;object-fit:cover"><div class="label sublabel">${name}</div></div>`));
+PHOTOS.forEach(([slug,label]) => el('photography').insertAdjacentHTML('beforeend',
+  `<div class="cell"><img src="photography/thumb-${slug}.jpg" alt="${label}"><div class="label">${label}</div></div>`));
+FLATLAYS.forEach(([slug,label]) => el('flatlays').insertAdjacentHTML('beforeend',
+  `<div class="cell"><img src="flat-lays/thumb-${slug}.jpg" alt="${label}" loading="lazy"><div class="label">${label}</div></div>`));
+</script>
+</body>
+</html>

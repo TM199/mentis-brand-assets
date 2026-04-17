@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Alice Blue base -->
+  <rect width="1200" height="800" fill="#F2F6FB"/>
+
+  <!--
+    Isometric prisms at 30° angle, staggered from bottom-left to top-right.
+    Each prism = top face (parallelogram) + left face + right face.
+    Isometric unit: x-step 80, y-step 46 (approx sin30 * 80 = 40, cos30 * 80 ≈ 69)
+    Using simpler grid: each column offset by 40px x, 23px y.
+  -->
+
+  <!-- Prism 1: Deep Space Blue — bottom-left -->
+  <g transform="translate(220, 580)">
+    <!-- top face -->
+    <polygon points="0,-80 160,-40 160,40 0,80" fill="#1A3A5C" fill-opacity="0.90"/>
+    <!-- left face -->
+    <polygon points="-80,0 0,80 0,240 -80,160" fill="#1A3A5C" fill-opacity="0.60"/>
+    <!-- right face -->
+    <polygon points="160,40 240,-40 240,120 160,200" fill="#1A3A5C" fill-opacity="0.40"/>
+  </g>
+
+  <!-- Prism 2: Crayola Blue — centre, slightly higher -->
+  <g transform="translate(520, 460)">
+    <!-- top face -->
+    <polygon points="0,-80 160,-40 160,40 0,80" fill="#2878E8" fill-opacity="0.85"/>
+    <!-- left face -->
+    <polygon points="-80,0 0,80 0,240 -80,160" fill="#2878E8" fill-opacity="0.55"/>
+    <!-- right face -->
+    <polygon points="160,40 240,-40 240,120 160,200" fill="#2878E8" fill-opacity="0.35"/>
+  </g>
+
+  <!-- Prism 3: Sky Reflection — top-right, tallest -->
+  <g transform="translate(820, 330)">
+    <!-- top face -->
+    <polygon points="0,-80 160,-40 160,40 0,80" fill="#8AABC8" fill-opacity="0.80"/>
+    <!-- left face -->
+    <polygon points="-80,0 0,80 0,300 -80,220" fill="#8AABC8" fill-opacity="0.55"/>
+    <!-- right face -->
+    <polygon points="160,40 240,-40 240,180 160,260" fill="#8AABC8" fill-opacity="0.35"/>
+  </g>
+</svg>

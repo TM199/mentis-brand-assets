@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentis — Illustration Style Candidates (Task 6)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --deep-space: #1A3A5C;
+      --crayola-blue: #2878E8;
+      --harvest-gold: #D4980F;
+      --alice-blue: #F2F6FB;
+      --sky-reflection: #8AABC8;
+      --ink: #0F2237;
+    }
+
+    body {
+      background-color: var(--alice-blue);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      padding: 48px;
+      min-height: 100vh;
+    }
+
+    header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--sky-reflection);
+      padding-bottom: 24px;
+    }
+
+    header h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: var(--deep-space);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      opacity: 0.85;
+      letter-spacing: 0.01em;
+    }
+
+    .pick-prompt {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--crayola-blue);
+      color: var(--alice-blue);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--deep-space);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--alice-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-meta {
+      padding: 16px 20px 18px;
+      flex: 1;
+    }
+
+    .card-number {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--harvest-gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .card-style {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--alice-blue);
+      opacity: 0.95;
+      line-height: 1.3;
+    }
+
+    .card-substyle {
+      margin-top: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--sky-reflection);
+      opacity: 0.85;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .card-desc {
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--alice-blue);
+      opacity: 0.7;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--sky-reflection);
+      font-size: 11px;
+      color: var(--ink);
+      opacity: 0.5;
+    }
+
+    @media (max-width: 900px) {
+      body { padding: 24px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mentis — Illustration Style Candidates</h1>
+    <p>Task 6 · Same subject, 6 style variants · recraftv3 · 1365×1024</p>
+    <span class="pick-prompt">Pick 1–6 to lock as the brand illustration style</span>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-image">
+        <img src="candidate-01.svg" alt="Candidate 1 — Editorial vector">
+      </div>
+      <div class="card-meta">
+        <div class="card-number">01</div>
+        <div class="card-style">Editorial Vector</div>
+        <div class="card-substyle">vector_illustration · editorial</div>
+        <div class="card-desc">Pilot.com style. Thin outlines, muted professional palette, editorial precision. Closest to the consulting-grade benchmark.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="candidate-02.svg" alt="Candidate 2 — Roundish flat">
+      </div>
+      <div class="card-meta">
+        <div class="card-number">02</div>
+        <div class="card-style">Modern Flat Vector</div>
+        <div class="card-substyle">vector_illustration · roundish_flat</div>
+        <div class="card-desc">Geometric shapes with soft rounded corners. Approachable, modern SaaS feel. Lighter and friendlier than editorial.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="candidate-03.svg" alt="Candidate 3 — Thin line">
+      </div>
+      <div class="card-meta">
+        <div class="card-number">03</div>
+        <div class="card-style">Minimalist Thin-Line</div>
+        <div class="card-substyle">vector_illustration · thin</div>
+        <div class="card-desc">Stripe/fintech register. Very restrained — figures, screen, environment reduced to essentials. Serious and confident.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="candidate-04.webp" alt="Candidate 4 — Grain editorial">
+      </div>
+      <div class="card-meta">
+        <div class="card-number">04</div>
+        <div class="card-style">Grain Editorial</div>
+        <div class="card-substyle">digital_illustration · grain_20</div>
+        <div class="card-desc">Subtle grain texture lifts the consulting-grade feel. Warm professional palette with depth. Most editorial/magazine quality of the raster options.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="candidate-05.svg" alt="Candidate 5 — Segmented colours">
+      </div>
+      <div class="card-meta">
+        <div class="card-number">05</div>
+        <div class="card-style">Segmented Colour Blocks</div>
+        <div class="card-substyle">vector_illustration · segmented_colors</div>
+        <div class="card-desc">Geometric flat vector with hard colour segmentation. Isometric-influenced, bold. High contrast — stands out in feeds but less muted.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="candidate-06.webp" alt="Candidate 6 — Handmade 3D">
+      </div>
+      <div class="card-meta">
+        <div class="card-number">06</div>
+        <div class="card-style">Handmade 3D Depth</div>
+        <div class="card-substyle">digital_illustration · handmade_3d</div>
+        <div class="card-desc">Clay/tactile 3D figures with editorial intent. Unusual differentiation — warm and human. Intercom-adjacent. Different register from the rest.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Mentis Brand Build · Task 6 · Generated 2026-04-17 · Do not distribute before style is locked
+  </footer>
+
+</body>
+</html>
