@@ -7,11 +7,22 @@ This file is intentionally Claude-readable: dense, unambiguous, no marketing flu
 
 ## 1. Brand in one paragraph
 
-Mentis Digital is a managed business-development service for UK recruitment agencies (10–80 heads). We run a three-layer system — proprietary signal detection, human judgement, and direct senior outreach — so recruitment agencies stop riding the feast-and-famine cycle. **We are a service brand, not a SaaS product.** The team is the promise. Every touchpoint should feel like it came from a senior, quietly confident partner — not a growth-marketing tool.
+Mentis Digital is a managed business-development service for UK recruitment agencies (10–80 heads). Our team is interdisciplinary by design — **data engineers, software engineers, process designers, and relationship operators (people's people) under one roof.** We don't sell another consultancy engagement. We build **conversion systems** and staff the human judgement layer inside them.
+
+The philosophy is human-in-the-loop by construction: **AI handles what it does best — capturing signals and hiring triggers autonomously at scale, correlating them, surfacing the right moment to act. Humans handle what they do best — connection, judgement, and the conversation that closes.** Neither layer works without the other. Machines at speed; people at the point of conversion. For recruitment this is transformative; for B2B pipeline generally, it's the obvious model.
+
+**We are a service brand, not a SaaS product — and not a consultant.** The team is the promise. Every touchpoint should feel like it came from a senior, quietly confident partner who builds the system, then runs it alongside you.
 
 **Reference register:** FT + Pilot.com + Monocle + Heidrick & Struggles. Editorial, restrained, warm, rigorous.
 
-**Target reader:** UK agency director, time-poor, sceptical, has been burned by outbound tools. Needs to trust before they move.
+**Target reader:** UK agency director, 10–80 heads, time-poor, sceptical. Has been burned by outbound tools that promised pipeline and delivered metrics, and by consultants who produced decks and disappeared. Needs to trust before they move.
+
+### The differentiator — read this carefully
+
+- **vs a consultant:** consultants advise and leave. We build a system AND run the human layer inside it. The engagement is the machine plus the operators, not a deliverable PDF.
+- **vs a cold-outreach vendor (Apollo / Instantly / Lemlist):** they sell automation without judgement. We refuse the automation-only path — junior BDRs and bots do senior work badly, which is why outbound is broken.
+- **vs a traditional BD agency or staffing firm:** they sell bodies. We sell a system that compounds, staffed by senior operators where connection matters.
+- **vs building in-house:** you'd need data engineers + software engineers + process designers + senior BD people, hired and managed. We are that team, ready.
 
 ---
 
@@ -147,15 +158,22 @@ Mentis sounds like a senior operator who has sat in the agency director's chair.
 
 ---
 
-## 8. What this brand must never look like
+## 8. What this brand must never look like — or sound like
 
+### Visual don'ts
 - A SaaS landing page with product screenshots and "Try free" CTAs.
 - A cold-outreach vendor (Apollo / Instantly / Lemlist register).
 - A traditional staffing firm (suited-stock-photo energy).
-- Anything that centres a tool over the people running it.
 - A "playful" startup brand with rounded illustrations and pastel backgrounds.
 
-When in doubt: **editorial, restrained, warm, senior.**
+### Positioning don'ts — equally important
+- **Never frame Mentis as "a consultancy."** We build systems and staff the human layer inside them. Consultants advise; we operate.
+- **Never frame AI as the product.** AI is one layer — speed and scale. Humans are the other — connection and judgement. Separating them misrepresents the brand.
+- **Never frame humans alone as the differentiator** ("hire our BD experts"). Humans without the signal system are just another agency.
+- **Never centre the tool over the people running it.** The team is the promise.
+- **Never lean on automation vocabulary.** No "workflows", "fully automated", "hands-off", "set and forget".
+
+When in doubt: **editorial, restrained, warm, senior — a team that builds systems and runs them, not a consultancy and not a tool.**
 
 ---
 

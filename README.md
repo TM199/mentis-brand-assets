@@ -32,7 +32,9 @@ Public asset library + design system for **Mentis Digital**, a managed business-
 
 **Voice** — British English, short declarative sentences, specific proof. No exclamation marks. No emojis. No hype vocabulary. Warm but quietly confident — FT + Pilot + Monocle register.
 
-**Never** — pure black, pure white backgrounds, SaaS mockups, stock-photo-corporate imagery, gold over 5%, rhetorical-question copy.
+**Positioning** — Mentis is a service brand, not a consultancy and not a SaaS product. Interdisciplinary team (data engineers, software engineers, process designers, relationship operators) who **build conversion systems and staff the human judgement layer inside them.** AI handles signal capture and hiring-trigger correlation at scale; humans handle connection and the conversation that closes. The two layers together are the differentiator.
+
+**Never** — pure black, pure white backgrounds, SaaS mockups, stock-photo-corporate imagery, gold over 5%, rhetorical-question copy, "consultancy" framing, "automation" framing.
 
 See [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md) for the full rules.
 
