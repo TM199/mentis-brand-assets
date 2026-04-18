@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- Instantly logo - purple with megaphone -->
+  <rect x="2" y="4" width="32" height="32" rx="6" fill="#7C5CFC"/>
+  <!-- Megaphone body -->
+  <path d="M12 14 L12 26 L14 26 L14 14 Z" fill="white"/>
+  <circle cx="13" cy="12" r="2.5" fill="white"/>
+  <path d="M16 13 L26 9 L26 31 L16 27 Z" fill="white"/>
+  <!-- Sound waves -->
+  <path d="M28 16 C30 18, 30 22, 28 24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="40" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#7C5CFC">instantly</text>
+</svg>
