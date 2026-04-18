@@ -9,9 +9,17 @@ This file is intentionally Claude-readable: dense, unambiguous, no marketing flu
 
 Mentis Digital is a managed business-development service for UK recruitment agencies (10–80 heads). Our team is interdisciplinary by design — **data engineers, software engineers, process designers, and relationship operators (people's people) under one roof.** We don't sell another consultancy engagement. We build **conversion systems** and staff the human judgement layer inside them.
 
-The philosophy is human-in-the-loop by construction: **AI handles what it does best — capturing signals and hiring triggers autonomously at scale, correlating them, surfacing the right moment to act. Humans handle what they do best — connection, judgement, and the conversation that closes.** Neither layer works without the other. Machines at speed; people at the point of conversion. For recruitment this is transformative; for B2B pipeline generally, it's the obvious model.
+### Two layers — and only one is client-facing
 
-**The output we deliver is booked meetings with hiring managers — not intelligence reports, not leads, not a dashboard.** Our clients' recruiters get to focus on recruiting; we own the prospecting function. But we don't book those meetings the old-fashioned way — no cold dial-smashing, no generic cadences, no spray-and-pray. We watch for **digital engagement as the reference point for when to call** (a post, a comment, a hire, a fundraise, a trigger in the data), we research the individual before we reach out, and we **tailor every message or call to the person and the moment** based on the signals we already hold. Outreach is a craft, not a volume game.
+**The internal layer (how we work — clients never see this):**
+Our proprietary systems capture signals and hiring triggers autonomously at scale — funding rounds, expansions, contract awards, new hires, job specs gone live this week. AI does the ingestion and correlation; trained campaign managers interpret the signal and decide who to contact, when, and how. Then they run a real multichannel outreach cadence — written by a person, tied to a specific signal, sent to a specific human at a specific moment. Craft, not volume. This is the engine.
+
+**The client-facing layer (the only thing clients actually receive):**
+Meetings booked into their calendar with hiring managers. A short weekly update — pipeline added, messages out, replies in, meetings booked. Thirty seconds to read. Thirty minutes a week with us. That's it.
+
+**Clients do not see a dashboard. Clients do not see signals. Clients do not see data.** They see a full diary and a pipeline that fills itself while they bill. We use the systems we built, we run the campaigns for them, we assign trained reps to do the outreach using our multichannel cadence — and we hand them booked meetings with hiring managers so their consultants can focus on what they are good at: placing the best candidates and keeping the agency profitable.
+
+For recruitment this is transformative. For B2B pipeline generally, it's the obvious model. But the deliverable is always the same: **a calendar with meetings in it, and a consistent pipeline that keeps the agency profitable.**
 
 **We are a service brand, not a SaaS product — and not a consultant.** The team is the promise. Every touchpoint should feel like it came from a senior, quietly confident partner who builds the system, then runs it alongside you.
 
@@ -195,7 +203,8 @@ All examples below are pulled from the live website (mentisdigital.co.uk) — th
 - **Never frame Mentis as "intelligence" or "data" alone.** The output is booked meetings with hiring managers, not reports or leads or a dashboard.
 - **Never frame AI as the product.** AI is one layer — speed and scale. Humans are the other — connection and judgement. Separating them misrepresents the brand.
 - **Never frame humans alone as the differentiator** ("hire our BD experts"). Humans without the signal system are just another agency.
-- **Never describe outreach as volume, cadence, or dial-smashing.** Our outreach is signal-triggered, researched, and tailored — craft, not volume. Words like "sequence", "cadence", "blast", "dialler" are off-brand.
+- **Never describe outreach as volume, spray-and-pray, or dial-smashing.** Our outreach is signal-triggered, researched, and tailored — craft, not volume. "Sequence", "blast", "dialler", "automated cadence" are off-brand. **However: "outreach cadence" and "multichannel" ARE on-brand when describing our own disciplined process** — they mean trained campaign managers running paced, purposeful contact across email, LinkedIn, and phone, with judgement at every step.
+- **Never expose signals or data as a client-facing thing.** Clients don't see a dashboard, don't read signals, don't get reports. The deliverable is meetings in a calendar plus a thirty-second weekly update. Internal mechanism stays internal.
 - **Never centre the tool over the people running it.** The team is the promise.
 - **Never lean on automation vocabulary.** No "workflows", "fully automated", "hands-off", "set and forget".
 
