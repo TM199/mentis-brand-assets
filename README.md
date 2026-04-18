@@ -34,7 +34,9 @@ Public asset library + design system for **Mentis Digital**, a managed business-
 
 **Positioning** — Mentis is a service brand, not a consultancy and not a SaaS product. Interdisciplinary team (data engineers, software engineers, process designers, relationship operators) who **build conversion systems and staff the human judgement layer inside them.** AI handles signal capture and hiring-trigger correlation at scale; humans handle connection and the conversation that closes. The two layers together are the differentiator.
 
-**Never** — pure black, pure white backgrounds, SaaS mockups, stock-photo-corporate imagery, gold over 5%, rhetorical-question copy, "consultancy" framing, "automation" framing.
+**Output** — booked meetings with hiring managers, so the client's recruiters focus on recruiting. Outreach is **signal-triggered, researched, and tailored** — we only call when digital engagement gives us a reason, we know who we're talking to, and every message matches the person and the moment. Craft, not volume. Never dial-smashing or spray-and-pray.
+
+**Never** — pure black, pure white backgrounds, SaaS mockups, stock-photo-corporate imagery, gold over 5%, rhetorical-question copy, "consultancy" framing, "automation" framing, cadence/sequencer/dialler vocabulary.
 
 See [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md) for the full rules.
 

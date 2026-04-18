@@ -11,6 +11,8 @@ Mentis Digital is a managed business-development service for UK recruitment agen
 
 The philosophy is human-in-the-loop by construction: **AI handles what it does best — capturing signals and hiring triggers autonomously at scale, correlating them, surfacing the right moment to act. Humans handle what they do best — connection, judgement, and the conversation that closes.** Neither layer works without the other. Machines at speed; people at the point of conversion. For recruitment this is transformative; for B2B pipeline generally, it's the obvious model.
 
+**The output we deliver is booked meetings with hiring managers — not intelligence reports, not leads, not a dashboard.** Our clients' recruiters get to focus on recruiting; we own the prospecting function. But we don't book those meetings the old-fashioned way — no cold dial-smashing, no generic cadences, no spray-and-pray. We watch for **digital engagement as the reference point for when to call** (a post, a comment, a hire, a fundraise, a trigger in the data), we research the individual before we reach out, and we **tailor every message or call to the person and the moment** based on the signals we already hold. Outreach is a craft, not a volume game.
+
 **We are a service brand, not a SaaS product — and not a consultant.** The team is the promise. Every touchpoint should feel like it came from a senior, quietly confident partner who builds the system, then runs it alongside you.
 
 **Reference register:** FT + Pilot.com + Monocle + Heidrick & Struggles. Editorial, restrained, warm, rigorous.
@@ -20,7 +22,7 @@ The philosophy is human-in-the-loop by construction: **AI handles what it does b
 ### The differentiator — read this carefully
 
 - **vs a consultant:** consultants advise and leave. We build a system AND run the human layer inside it. The engagement is the machine plus the operators, not a deliverable PDF.
-- **vs a cold-outreach vendor (Apollo / Instantly / Lemlist):** they sell automation without judgement. We refuse the automation-only path — junior BDRs and bots do senior work badly, which is why outbound is broken.
+- **vs a cold-outreach vendor (Apollo / Instantly / Lemlist):** they sell automation without judgement — and dial-smashing operations still run scripts at volume hoping one sticks. We refuse both. Outreach only happens when a signal says it's the right moment, aimed at a person we've researched, with a message tailored to them. Craft, not volume.
 - **vs a traditional BD agency or staffing firm:** they sell bodies. We sell a system that compounds, staffed by senior operators where connection matters.
 - **vs building in-house:** you'd need data engineers + software engineers + process designers + senior BD people, hired and managed. We are that team, ready.
 
@@ -168,8 +170,10 @@ Mentis sounds like a senior operator who has sat in the agency director's chair.
 
 ### Positioning don'ts — equally important
 - **Never frame Mentis as "a consultancy."** We build systems and staff the human layer inside them. Consultants advise; we operate.
+- **Never frame Mentis as "intelligence" or "data" alone.** The output is booked meetings with hiring managers, not reports or leads or a dashboard.
 - **Never frame AI as the product.** AI is one layer — speed and scale. Humans are the other — connection and judgement. Separating them misrepresents the brand.
 - **Never frame humans alone as the differentiator** ("hire our BD experts"). Humans without the signal system are just another agency.
+- **Never describe outreach as volume, cadence, or dial-smashing.** Our outreach is signal-triggered, researched, and tailored — craft, not volume. Words like "sequence", "cadence", "blast", "dialler" are off-brand.
 - **Never centre the tool over the people running it.** The team is the promise.
 - **Never lean on automation vocabulary.** No "workflows", "fully automated", "hands-off", "set and forget".
 
