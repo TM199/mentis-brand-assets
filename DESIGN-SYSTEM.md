@@ -112,11 +112,33 @@ Mentis sounds like a senior operator who has sat in the agency director's chair.
 - Rhetorical questions as filler ("Ever wondered how…?").
 - Dashboard / SaaS metaphors ("your command centre", "one source of truth for pipeline").
 
-### Three voice pillars
+### Three voice pillars (with real Mentis copy)
 
-1. **Direct.** Say the sharp thing clearly. *"Your outbound doesn't work because junior BDRs are doing senior work. We fix that."*
-2. **Rigorous.** Every claim earned with a number or named client. *"3.4× more qualified meetings in the first 60 days. Average across 12 UK agencies, 2025."*
-3. **Quietly confident.** No chest-beating. *"We've run this play for eleven agencies. We know what the second month looks like."*
+All examples below are pulled from the live website (mentisdigital.co.uk) — they are the authoritative voice reference. New copy should pattern-match these.
+
+1. **Direct.** Say the sharp thing clearly. Diagnose before you propose.
+   - *"Most recruitment BD doesn't work because it's too late and too generic."*
+   - *"By the time you hear about an opportunity, four agencies are already there with candidates. And 'just checking in' emails? Straight to the bin."*
+   - *"You've tried outsourced lead gen and got rubbish leads with no context. Generic lists that waste your consultants' time."*
+
+2. **Rigorous.** Specific claims, specific numbers, specific behaviours.
+   - *"Your consultants spend 60%+ of their time on non-billing activities. That's not sustainable."*
+   - *"Our campaign managers monitor thousands of buying signals daily — funding rounds, expansions, contract awards — to identify companies with genuine hiring needs before your competitors reach them."*
+   - *"Not spray-and-pray. Hyper-relevant messages triggered by real buying signals."*
+
+3. **Quietly confident.** Service framing, no chest-beating, anti-pitch.
+   - *"We run your BD so your recruiters can recruit."*
+   - *"Like having a BD team without the headcount."*
+   - *"30 minutes a week from you. We handle the rest."*
+   - *"This isn't set-and-forget — it's an active partnership."*
+   - *"15-minute conversation. No pitch deck, no hard sell — just an honest conversation about whether we can help. If we can help, we'll explain how. If we can't, we'll tell you that too."*
+
+### Vocabulary we use (lifted from real copy)
+- "campaign manager" — the term for our human operator. Never "BDR", "SDR", "sales rep".
+- "buying signals" / "hiring signals" / "real buying signals" — the trigger that justifies outreach.
+- "growth engine" / "operations engine" / "full GTM" — our service tiers.
+- "rubbish leads", "straight to the bin", "set-and-forget", "spray-and-pray", "rip-and-replace" — British, plain-spoken anti-patterns.
+- "no templates", "no rip-and-replace", "no disruption" — the negative framing that signals the opposite of what bad vendors do.
 
 ---
 
