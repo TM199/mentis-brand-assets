@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<title>The Signal — Review · Mentis</title>
+<link rel="stylesheet" href="brand/colors_and_type.css" />
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  body { font-family: 'Inter', sans-serif; color: #0F2237; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="data/guests.js"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="components/SignalBrand.jsx"></script>
+<script type="text/babel" src="components/GuestPackCover.jsx"></script>
+<script type="text/babel" src="components/ThreeThemesSpread.jsx"></script>
+<script type="text/babel" src="components/SocialCards.jsx"></script>
+
+<script type="text/babel">
+const GUESTS = window.GUESTS;
+const KAMMAL = GUESTS.kammal;
+const KEVIN = GUESTS.kevin;
+
+// ───────────────────────────────────────────────────────────
+// Helper: a full guest review row — cover + themes spread +
+// the four social cards. Reused for Kammal and Kevin.
+// ───────────────────────────────────────────────────────────
+function GuestReviewRow({ guest, index, draft, notes }) {
+  const guestLabel = `${guest.name} · Episode ${guest.episode}`;
+  return (
+    <>
+      {/* Row intro — guest identification strip */}
+      <div style={{
+        padding: '0 60px 20px', marginTop: 40,
+        display: 'flex', alignItems: 'center', gap: 20,
+      }}>
+        <div style={{
+          fontFamily: 'Fraunces, serif', fontStyle: 'italic', fontWeight: 400,
+          fontSize: 20, color: '#D4980F',
+        }}>№</div>
+        <div style={{
+          fontFamily: 'Fraunces, serif', fontWeight: 600, fontSize: 40,
+          color: '#1A3A5C', letterSpacing: '-0.02em', lineHeight: 1,
+        }}>{String(index).padStart(2, '0')}</div>
+        <div style={{ width: 36, height: 1.5, background: '#D4980F' }} />
+        <div>
+          <div style={{
+            fontFamily: 'Fraunces, serif', fontWeight: 600,
+            fontSize: 28, letterSpacing: '-0.015em', color: '#1A1110', lineHeight: 1.1,
+          }}>{guest.name}</div>
+          <div style={{
+            fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase',
+            color: 'rgba(40,30,20,0.55)', fontWeight: 500, marginTop: 6,
+          }}>Episode {guest.episode} · {guest.role} · {guest.agency}</div>
+        </div>
+        {draft && (
+          <div style={{
+            marginLeft: 'auto',
+            padding: '6px 12px',
+            background: 'rgba(212,152,15,0.12)',
+            border: '1px solid rgba(212,152,15,0.4)',
+            fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase',
+            color: '#8c5f00', fontWeight: 600,
+          }}>Draft themes · awaiting confirmation</div>
+        )}
+      </div>
+
+      {/* 02 — Guest Pack cover */}
+      <DCSection
+        title={`${String(index).padStart(2, '0')}A · Guest Pack · Cover — ${guest.name}`}
+        subtitle="A4 portrait. Deep Space Blue masthead over the guest plate. Real headshot, real copy."
+      >
+        <DCArtboard label={`Cover · A4 · ${guest.name}`} width={794} height={1123}>
+          <GuestPackCover guest={guest} />
+        </DCArtboard>
+
+        <div style={{ position: 'relative', width: 320 }}>
+          {notes.cover.map((n, i) => (
+            <DCPostIt key={i} top={40 + i * 260} left={20} width={280}
+                      rotate={i % 2 === 0 ? -1.5 : 1.2}>
+              <strong>{n.title}</strong>
+              <div style={{ marginTop: 8 }} dangerouslySetInnerHTML={{ __html: n.body }} />
+            </DCPostIt>
+          ))}
+        </div>
+      </DCSection>
+
+      {/* 02B — Themes spread */}
+      <DCSection
+        title={`${String(index).padStart(2, '0')}B · Guest Pack · Three Themes spread — ${guest.name}`}
+        subtitle={draft
+          ? 'Two A4 pages shown together. DRAFT themes — Trisden to review and confirm before sending to Kevin.'
+          : 'Two A4 pages. The themes are built from the real brief — they are ready to send.'}
+      >
+        <DCArtboard label={`Spread · Pages 06–07 · ${guest.name}`} width={1588} height={1123}>
+          <ThreeThemesSpread guest={guest} />
+        </DCArtboard>
+
+        <div style={{ position: 'relative', width: 320 }}>
+          {notes.spread.map((n, i) => (
+            <DCPostIt key={i} top={40 + i * 280} left={20} width={280}
+                      rotate={i % 2 === 0 ? 1.5 : -1.2}>
+              <strong>{n.title}</strong>
+              <div style={{ marginTop: 8 }} dangerouslySetInnerHTML={{ __html: n.body }} />
+            </DCPostIt>
+          ))}
+        </div>
+      </DCSection>
+
+      {/* 02C — Social set */}
+      <DCSection
+        title={`${String(index).padStart(2, '0')}C · Promo pack — ${guest.name}`}
+        subtitle="Four formats, one DNA. Pull-quote is the social quote from the brief; swap at will."
+      >
+        <DCArtboard label="LinkedIn · 1200×627" width={1200} height={627}>
+          <SocialLinkedIn guest={guest} />
+        </DCArtboard>
+
+        <DCArtboard label="Instagram square · 1080×1080" width={1080} height={1080}>
+          <SocialIGSquare guest={guest} />
+        </DCArtboard>
+
+        <DCArtboard label="Instagram story · 1080×1920" width={540} height={960}
+                    style={{ background: 'transparent' }}>
+          <div style={{ width: 1080, height: 1920, transform: 'scale(0.5)', transformOrigin: '0 0' }}>
+            <SocialIGStory guest={guest} />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="16:9 clip thumbnail · 1920×1080" width={1280} height={720}
+                    style={{ background: 'transparent' }}>
+          <div style={{ width: 1920, height: 1080, transform: 'scale(0.6666)', transformOrigin: '0 0' }}>
+            <SocialClip16x9 guest={guest} />
+          </div>
+        </DCArtboard>
+      </DCSection>
+    </>
+  );
+}
+
+// Per-guest post-it notes — the designer's margin notes to Trisden
+const KAMMAL_NOTES = {
+  cover: [
+    { title: 'Masthead block locked.',
+      body: 'Top half is the masthead every episode. Bottom half is the swap zone — headshot, name, role, agency, episode, dates, location, release. For Kammal: all eight fields come straight from the brief.' },
+    { title: 'The photo Kammal sent.',
+      body: 'Full colour, slight desat, corner marks. Reads as <em>considered</em> rather than stock. If you want a duotone treatment for consistency across all guests, say the word.' },
+    { title: 'Footer = guarantee.',
+      body: '&ldquo;Nothing is by accident.&rdquo; appears on every cover, every social card, every spread. It is the single line the brand is built around.' },
+  ],
+  spread: [
+    { title: 'Four themes — not three.',
+      body: 'Kammal\'s brief gave us four threads worth pulling. The spread still reads clean because the numbered column paces it. If we have to cut one, my vote is to merge the Transatlantic theme into the decade theme and keep Coming Back and Transparency intact.' },
+    { title: 'Transparency is the closer.',
+      body: 'I put it last on purpose. It is the one Kammal wants to get to, and the one listeners will quote. The &ldquo;moment&rdquo; prompt underneath each theme is what gets us there without a script.' },
+    { title: 'Pull-quote on left page is generic — for now.',
+      body: 'That is Law No. 03 from the master list. Every guest pack shows the same law on page 06. If you\'d prefer a Kammal-specific pull-quote there instead, flag it.' },
+  ],
+};
+
+const KEVIN_NOTES = {
+  cover: [
+    { title: 'Same cover system, different guest.',
+      body: 'This is the whole point of the template — Kevin\'s cover is identical machinery to Kammal\'s. Eight fields swapped. Zero bespoke work.' },
+    { title: 'Photo check.',
+      body: 'Kevin\'s LinkedIn headshot works; it has more warmth than Kammal\'s. Corner marks and desat normalise them. If the photos ever diverge badly, we solve it with a duotone across the series.' },
+    { title: 'Episode 008 — direct successor.',
+      body: 'Recording with Kammal same day. The cover deliberately does not flag &ldquo;a two-parter&rdquo; — that lives in the caption, not the artwork.' },
+  ],
+  spread: [
+    { title: 'These themes are DRAFT.',
+      body: 'Pulled from Kevin\'s LinkedIn + the one-line context you gave me (&ldquo;friend of Kammal, TEKsystems Global Markets&rdquo;). Every framing paragraph is a best-guess. <strong>You need to rewrite these after a 15-minute call with Kevin</strong>, then paste updated copy.' },
+    { title: 'The fourth theme is the hook.',
+      body: '&ldquo;Two paths, one industry — you and Kammal.&rdquo; That is the reason both episodes exist in the same week. It gives the listener a reason to hear both — and it gives Kevin a clear role relative to Kammal.' },
+    { title: 'Framing paragraphs are longer than Kammal\'s.',
+      body: 'Deliberate. We know less about Kevin\'s story, so the prompts work harder to surface it. Once you brief him, you\'ll be able to tighten these significantly.' },
+  ],
+};
+
+function App() {
+  return (
+    <DesignCanvas>
+      {/* Intro header */}
+      <div style={{ padding: '0 60px 48px', maxWidth: 1200 }}>
+        <div style={{
+          fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase',
+          color: 'rgba(40,30,20,0.55)', fontWeight: 500, marginBottom: 10,
+        }}>Mentis Digital · Review pack · 19 April 2026</div>
+        <div style={{
+          fontFamily: 'Fraunces, serif', fontWeight: 600,
+          fontSize: 52, lineHeight: 1.02, letterSpacing: '-0.025em',
+          color: '#1A1110', marginBottom: 20, maxWidth: 1000,
+        }}>
+          The Signal — <span style={{ fontStyle: 'italic', fontWeight: 500 }}>Kammal &amp; Kevin.</span>
+        </div>
+        <div style={{
+          fontFamily: 'Inter, sans-serif', fontSize: 15, lineHeight: 1.6,
+          color: 'rgba(40,30,20,0.8)', maxWidth: 760, textWrap: 'pretty',
+        }}>
+          The first pass is approved; this is the second. Same sub-brand,
+          same templates — now driven by real data for your first two real
+          guests. <strong>Kammal\'s pack is ready to send.</strong> Kevin\'s pack
+          uses draft themes, clearly marked, that you need to confirm with
+          him before we publish. Everything downstream — social set, covers,
+          the numbered column — is template-driven, so a single edit in{' '}
+          <code style={{ background: 'rgba(40,30,20,0.06)', padding: '1px 6px', borderRadius: 3 }}>data/guests.js</code>{' '}
+          flows through every artefact.
+        </div>
+
+        {/* Status strip */}
+        <div style={{
+          marginTop: 32, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16,
+          maxWidth: 820,
+        }}>
+          <StatusCard
+            guest="Kammal Watkins"
+            episode="007"
+            status="Ready to send"
+            tone="go"
+            detail="Four themes, briefed, framing copy final. Photo approved."
+          />
+          <StatusCard
+            guest="Kevin Oti"
+            episode="008"
+            status="Draft — awaiting brief"
+            tone="draft"
+            detail="Themes drafted from LinkedIn. Needs a 15-min call with Kevin before sending."
+          />
+        </div>
+      </div>
+
+      {/* 01 — Sub-brand plate (shared, compact) */}
+      <DCSection
+        title="01 · Sub-brand plate"
+        subtitle="Unchanged from the first pass — included for context. Wordmark, motif, Mentis lock-up."
+      >
+        <DCArtboard label="Wordmark · on Deep Space Blue" width={420} height={280}>
+          <div style={{
+            width: '100%', height: '100%', background: '#1A3A5C',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <SignalWordmark size={1.4} color="#F2F6FB" accent="#D4980F" />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="Signature motif · layered frequency" width={660} height={280}>
+          <div style={{
+            width: '100%', height: '100%', background: '#1A3A5C',
+            padding: 24, boxSizing: 'border-box',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <SignalMotif width={612} height={230} color="#F2F6FB" accent="#D4980F" lineCount={9} />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="Lock-up · alongside Mentis" width={420} height={280}>
+          <div style={{
+            width: '100%', height: '100%', background: '#F2F6FB',
+            padding: 36, boxSizing: 'border-box',
+            display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+          }}>
+            <SignalWordmarkInline color="#1A3A5C" accent="#D4980F" size={1.1} />
+            <div style={{ height: 1, background: 'rgba(138,171,200,0.5)', margin: '20px 0' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <img src="brand/logo/mono-navy.svg" alt="Mentis" style={{ height: 24 }} />
+              <span style={{
+                fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase',
+                color: '#1A3A5C', opacity: 0.65, fontWeight: 500,
+              }}>A Mentis Podcast</span>
+            </div>
+          </div>
+        </DCArtboard>
+      </DCSection>
+
+      {/* 02 — Kammal */}
+      <GuestReviewRow guest={KAMMAL} index={2} draft={false} notes={KAMMAL_NOTES} />
+
+      {/* 03 — Kevin */}
+      <GuestReviewRow guest={KEVIN} index={3} draft={true} notes={KEVIN_NOTES} />
+
+      {/* 04 — Next steps */}
+      <DCSection
+        title="04 · What I need from you"
+        subtitle="Two decisions and one brief — then we ship both packs."
+      >
+        <DCArtboard label="Decisions" width={760} height={560}>
+          <div style={{
+            width: '100%', height: '100%', background: '#F2F6FB',
+            padding: 44, boxSizing: 'border-box',
+            fontFamily: 'Inter, sans-serif', color: '#0F2237',
+          }}>
+            <div style={{
+              fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: '#1A3A5C', fontWeight: 500, marginBottom: 20,
+            }}>Decision points</div>
+            <ol style={{ paddingLeft: 22, margin: 0, lineHeight: 1.55, fontSize: 14 }}>
+              <li style={{ marginBottom: 16 }}>
+                <strong>Kammal — sign off on the four themes.</strong>{' '}
+                If you want three instead of four, flag which to merge. My
+                recommendation is to merge <em>Transatlantic</em> into the
+                decade theme and keep the others standalone.
+              </li>
+              <li style={{ marginBottom: 16 }}>
+                <strong>Kevin — book the 15-minute brief call.</strong>{' '}
+                Then rewrite his four theme framings. The draft themes on
+                the spread are a starting point, not a sendable artefact.
+              </li>
+              <li style={{ marginBottom: 16 }}>
+                <strong>Photo treatment — duotone or natural?</strong>{' '}
+                Currently: full colour, slight desat. Across a series of
+                15+ guests, a consistent duotone (deep + alice) will feel
+                more editorial. Your call.
+              </li>
+              <li style={{ marginBottom: 16 }}>
+                <strong>Pull-quote source.</strong>{' '}
+                Each guest now has a <code>quote</code> field in{' '}
+                <code>data/guests.js</code>. I picked one from the tone of
+                the brief. Happy to swap to a different line from the
+                recording once we have it.
+              </li>
+              <li style={{ marginBottom: 16 }}>
+                <strong>Then: full pack build.</strong>{' '}
+                Once these are locked, I'll produce the remaining 10 pack
+                sections (Why we asked, Conversation shape, Logistics,
+                Release form, Laws of The Signal in full) for both guests.
+                Two days.
+              </li>
+            </ol>
+          </div>
+        </DCArtboard>
+
+        <div style={{ position: 'relative', width: 320 }}>
+          <DCPostIt top={40} left={20} width={280} rotate={-1.5}>
+            <strong>One edit = everything updates.</strong>
+            <div style={{ marginTop: 8 }}>
+              All of this is data-driven. Change Kammal's quote in{' '}
+              <code>data/guests.js</code>, refresh — cover, spread, and all
+              four social cards update together. You cannot get them out of sync.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={300} left={20} width={280} rotate={1}>
+            <strong>Kevin's DRAFT tag is deliberate.</strong>
+            <div style={{ marginTop: 8 }}>
+              I didn't want a polished-looking spread to trick you into
+              sending placeholder framings. Every paragraph on his right
+              page has &ldquo;DRAFT · &rdquo; prepended so nothing slips out.
+            </div>
+          </DCPostIt>
+        </div>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+function StatusCard({ guest, episode, status, tone, detail }) {
+  const isGo = tone === 'go';
+  return (
+    <div style={{
+      background: '#F2F6FB',
+      borderLeft: `3px solid ${isGo ? '#1A3A5C' : '#D4980F'}`,
+      padding: '16px 20px',
+      fontFamily: 'Inter, sans-serif',
+    }}>
+      <div style={{
+        display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
+        marginBottom: 6,
+      }}>
+        <div style={{
+          fontFamily: 'Fraunces, serif', fontWeight: 600, fontSize: 18,
+          color: '#1A1110', letterSpacing: '-0.015em',
+        }}>{guest}</div>
+        <div style={{
+          fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase',
+          color: '#1A3A5C', opacity: 0.65, fontWeight: 500,
+        }}>Ep {episode}</div>
+      </div>
+      <div style={{
+        fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase',
+        color: isGo ? '#1A3A5C' : '#8c5f00', fontWeight: 600, marginBottom: 6,
+      }}>{status}</div>
+      <div style={{
+        fontSize: 13, color: '#0F2237', opacity: 0.8, lineHeight: 1.5,
+      }}>{detail}</div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

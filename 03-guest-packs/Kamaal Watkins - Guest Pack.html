@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<title>Kamaal Watkins — Guest Pack · The Signal</title>
+<link rel="stylesheet" href="brand/colors_and_type.css" />
+<style>
+  @page { size: A4; margin: 0; }
+  html, body { margin: 0; padding: 0; background: #e8e4dc; }
+  body { font-family: 'Inter', sans-serif; color: #0F2237; }
+  .pack { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px 0; }
+  .pack > * { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+  @media print {
+    body { background: white; }
+    .pack { gap: 0; padding: 0; }
+    .pack > * { box-shadow: none; page-break-after: always; }
+  }
+  .social-row {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    padding: 40px; background: #1A3A5C; width: calc(100% - 80px); max-width: 1600px;
+    margin: 40px auto; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .social-row h2 {
+    color: #F2F6FB; font-family: 'Fraunces', serif; font-weight: 500; font-size: 28px;
+    width: 100%; margin: 0 0 8px; letter-spacing: -0.02em;
+  }
+  .social-row .label {
+    color: rgba(242,246,251,0.6); font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; margin-top: 8px; text-align: center;
+  }
+  .social-row .card { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  @media print { .social-row { display: none; } }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#1A3A5C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1A3A5C"/>
+    <g stroke="#F2F6FB" stroke-width="3" fill="none" opacity="0.9">
+      <path d="M 200 400 Q 400 200 600 400 T 1000 400"/>
+      <path d="M 200 440 Q 400 260 600 440 T 1000 440" opacity="0.6"/>
+      <path d="M 200 360 Q 400 140 600 360 T 1000 360" opacity="0.6"/>
+    </g>
+    <circle cx="600" cy="400" r="12" fill="#D4980F"/>
+    <text x="600" y="600" text-anchor="middle" font-family="serif" font-style="italic" font-size="72" fill="#F2F6FB">The Signal</text>
+  </svg>
+</template>
+<div id="root"></div>
+
+<script src="data/guests.js"></script>
+<script type="text/babel" src="components/SignalBrand.jsx"></script>
+<script type="text/babel" src="components/GuestPackCover.jsx"></script>
+<script type="text/babel" src="components/GuestPack.jsx"></script>
+<script type="text/babel" src="components/SocialCards.jsx"></script>
+
+<script type="text/babel">
+const GUEST = window.GUESTS.kammal;
+
+function App() {
+  return (
+    <>
+      <div className="pack">
+        <GuestPack guest={GUEST} />
+      </div>
+
+      <div className="social-row">
+        <h2>Promo set — for release week</h2>
+        <div className="card">
+          <div style={{ transform: 'scale(0.5)', transformOrigin: '0 0', width: 1200, height: 627, marginBottom: -313 }}>
+            <SocialLinkedIn guest={GUEST} />
+          </div>
+          <div className="label">LinkedIn · 1200 × 627</div>
+        </div>
+        <div className="card">
+          <div style={{ transform: 'scale(0.45)', transformOrigin: '0 0', width: 1080, height: 1080, marginBottom: -594 }}>
+            <SocialIGSquare guest={GUEST} />
+          </div>
+          <div className="label">Instagram Square · 1080 × 1080</div>
+        </div>
+        <div className="card">
+          <div style={{ transform: 'scale(0.28)', transformOrigin: '0 0', width: 1080, height: 1920, marginBottom: -1382 }}>
+            <SocialIGStory guest={GUEST} />
+          </div>
+          <div className="label">Instagram Story · 1080 × 1920</div>
+        </div>
+        <div className="card">
+          <div style={{ transform: 'scale(0.42)', transformOrigin: '0 0', width: 1920, height: 1080, marginBottom: -627 }}>
+            <SocialClip16x9 guest={GUEST} />
+          </div>
+          <div className="label">16:9 Clip · 1920 × 1080</div>
+        </div>
+      </div>
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

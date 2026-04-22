@@ -1,49 +1,82 @@
-# Mentis Digital — Brand Assets
+# The Signal — Design Handoff
 
-Public asset library + design system for **Mentis Digital**, a managed business-development service for UK recruitment agencies.
+Everything you need to work on **The Signal** (Mentis Digital's podcast) lives in this folder. It's organised so you can find any file in under 30 seconds.
 
-> **If you're an AI design tool (Claude Design, etc.) reading this repo:** start with [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md) and [`tokens.json`](./tokens.json). Those two files contain everything you need — palette, type, voice rules, hard constraints, asset inventory. The image folders are raw material to compose from.
-
----
-
-## Contents
-
-| Path | What's here |
-|---|---|
-| [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md) | **Primary brand reference.** Palette, typography, voice, imagery rules, hard "never do this" list, layout principles, inspiration anchors. Read this first. |
-| [`tokens.json`](./tokens.json) | Machine-readable design tokens (W3C draft format). Palette, type scale, spacing, rules. |
-| `logo/` | 4 lockups (SVG): primary, horizontal, mark, reversed. |
-| `icons/` | 24 Lucide-derived icons (SVG), recoloured to `#1A3A5C`. |
-| `illustrations/` | 10 editorial vector illustrations (SVG), palette-corrected. |
-| `backgrounds/` | 12 hand-coded SVG backgrounds. |
-| `photography/` | 8 warm, diverse 4K photographs (JPG, Nano Banana Pro). |
-| `flat-lays/` | 4 stationery flat-lays (JPG, 4K). |
-| `signature/` | 4 premium 3D renders (PNG) for hero surfaces. |
-
-**Total: 66 brand assets, one locked design system.**
+> **The Signal** is Mentis Digital's podcast about the recruitment industry — the conversations that don't usually happen openly. Host: Trisden. Format: long-form, guest-led, themed around career turning-points.
 
 ---
 
-## Quick reference
+## 📂 Folder map — start here
 
-**Palette** — `#1A3A5C` Deep Space Blue · `#2878E8` Crayola Blue · `#D4980F` Harvest Gold (≤5%) · `#F2F6FB` Alice Blue (default bg, never pure white) · `#8AABC8` Sky Reflection · `#0F2237` Ink (text, never pure black).
+| Folder | What's inside | When you need it |
+|---|---|---|
+| [`01-brand-system/`](./01-brand-system) | Colours, type, fonts, logos, CSS tokens | Any time you're designing something new for The Signal |
+| [`02-design-review-decks/`](./02-design-review-decks) | Design exploration HTMLs, in iteration order | Reviewing design direction or showing the journey |
+| [`03-guest-packs/`](./03-guest-packs) | Guest prep packs (Kamaal, Kevin) | Sending to guests ahead of recording |
+| [`04-source-assets/`](./04-source-assets) | Photos (guests + team) | Drop-in image assets for promo, decks, packs |
+| [`05-source-code/`](./05-source-code) | React/JSX components + guest data | If you need to edit or rebuild any of the HTMLs |
 
-**Typography** — Fraunces (headlines) + Inter (body). Both Google Fonts.
-
-**Voice** — British English, short declarative sentences, specific proof. No exclamation marks. No emojis. No hype vocabulary. Warm but quietly confident — FT + Pilot + Monocle register.
-
-**Positioning** — Mentis is a service brand, not a consultancy and not a SaaS product. Interdisciplinary team (data engineers, software engineers, process designers, relationship operators) who **build conversion systems and staff the human judgement layer inside them.** AI handles signal capture and hiring-trigger correlation at scale; humans handle connection and the conversation that closes. The two layers together are the differentiator.
-
-**Output** — booked meetings with hiring managers, so the client's recruiters focus on recruiting. Outreach is **signal-triggered, researched, and tailored** — we only call when digital engagement gives us a reason, we know who we're talking to, and every message matches the person and the moment. Craft, not volume. Never dial-smashing or spray-and-pray.
-
-**Never** — pure black, pure white backgrounds, SaaS mockups, stock-photo-corporate imagery, gold over 5%, rhetorical-question copy, "consultancy" framing, "automation" framing, cadence/sequencer/dialler vocabulary.
-
-See [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md) for the full rules.
+Each folder has its own README with more detail.
 
 ---
 
-## Consumption
+## 🎯 Common tasks — quick index
 
-Files are served via `raw.githubusercontent.com` (public). Canva Brand Kit and Claude Design can both ingest this repo directly — tokens, primer, and raw assets in one place.
+**"I need to send a guest pack to someone."**
+→ `03-guest-packs/standalone/` — standalone HTMLs (no external dependencies, work offline). Open in a browser, or export to PDF via Cmd/Ctrl+P.
 
-Related work surface (private): `mentis-brand-build/brand-kit/` locally contains the Canva template sources, brand book export, and Phase 3+ editable templates.
+**"I want to see the latest agreed design direction."**
+→ `02-design-review-decks/03 - The Signal - Review v2.html` — this is the current approved direction.
+
+**"I'm building something new and need the brand colours/fonts."**
+→ `01-brand-system/colors_and_type.css` — drop this into your project. Everything is CSS variables.
+
+**"I need the logo."**
+→ `01-brand-system/logo/` — SVGs are preferred. `primary.svg` for light backgrounds, `mono-navy.svg` for single-colour, `mark.svg` is the standalone icon, `horizontal.png` if a raster is unavoidable.
+
+**"I need guest photos."**
+→ `04-source-assets/guest-photos/`
+
+**"I want to edit a guest pack."**
+→ Edit data in `05-source-code/data/guests.js`, then re-open the HTML in `03-guest-packs/`.
+
+---
+
+## 📐 Design rules (non-negotiable)
+
+From the brand system — these are baked into `colors_and_type.css`:
+
+- **Never** use `#000000` — use `var(--mentis-ink)` (`#0F2237`).
+- **Never** use `#FFFFFF` as a page background — use `var(--mentis-alice)` (`#F2F6FB`).
+- Harvest Gold (`#D4980F`) ≤ **5%** of any surface.
+- Body text: 85% opacity on Alice Blue, 100% on Deep Space Blue.
+- **Left-align by default**. Never centre body copy.
+- Type: **Fraunces** (display) + **Inter** (body). Both are in `01-brand-system/fonts/`.
+
+Full tokens + semantic classes are in `01-brand-system/colors_and_type.css`.
+
+---
+
+## 🗂 File naming conventions
+
+- **Design review decks** are numbered by iteration (`01`, `02`, `03`). Higher = newer.
+- **"(standalone)"** in a filename = the file has all assets inlined and works offline. Use these for sending out.
+- **Without "(standalone)"** = references files in `01-brand-system/`. Keep the folder structure intact to view these locally.
+
+---
+
+## 🚀 Opening the HTML files
+
+All HTMLs are designed to open directly in a browser — just double-click. For the non-standalone decks to render fonts and logos correctly, keep the folder structure intact (they load relative paths from `01-brand-system/`).
+
+If fonts look wrong: check the `01-brand-system/fonts/` folder is in place relative to `01-brand-system/colors_and_type.css`.
+
+---
+
+## ❓ Questions
+
+Anything unclear, ping Trisden. For design-system questions, the rules in `01-brand-system/colors_and_type.css` (comments at the top) are the source of truth.
+
+---
+
+_Last updated: April 2026_

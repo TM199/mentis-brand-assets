@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<title>The Signal — First Pass · Mentis</title>
+<link rel="stylesheet" href="brand/colors_and_type.css" />
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  body { font-family: 'Inter', sans-serif; color: #0F2237; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="components/SignalBrand.jsx"></script>
+<script type="text/babel" src="components/GuestPackCover.jsx"></script>
+<script type="text/babel" src="components/ThreeThemesSpread.jsx"></script>
+<script type="text/babel" src="components/SocialCards.jsx"></script>
+
+<script type="text/babel">
+const GUEST = {
+  name: '[Guest Name]',
+  role: '[Role / Title]',
+  agency: '[Agency Name]',
+  episode: '007',
+  recordingDate: 'Thu · 14 May · 14:00 BST',
+  location: 'Riverside · London EC4',
+  releaseWindow: 'Week of 2 June',
+  photo: 'brand/team/trisden.jpg', // placeholder — swap per guest
+  quote: 'We stopped chasing roles and started chasing the three clients we actually wanted to work with. Everything changed in a quarter.',
+  themes: [
+    {
+      title: 'The quiet shift from volume to precision.',
+      framing: 'Why the agency model stopped scaling on effort alone — and what replaced it.',
+      prompts: [
+        'What changed first — the market, the clients, or your conviction?',
+        'Where did the old instincts betray you?',
+        'Which metric did you stop watching, and which one replaced it?',
+      ],
+      moment: 'you knew the old playbook was finished — a week, a client call, a number you still remember.',
+    },
+    {
+      title: 'Rebuilding the desk around judgement, not motion.',
+      framing: 'What a team looks like when the work is thinking, not doing.',
+      prompts: [
+        'Who on your team do you protect from the noise, and why?',
+        'What did you have to unlearn as an operator?',
+        'What does a good Monday morning look like now?',
+      ],
+      moment: 'a colleague made a call you would not have made — and it worked.',
+    },
+    {
+      title: 'The clients worth keeping close.',
+      framing: 'The economics and ethics of saying no to the wrong work.',
+      prompts: [
+        'What does a right-fit client look like, in one sentence?',
+        'What did you lose by keeping the wrong ones too long?',
+        'What would you tell a founder who is one year behind you?',
+      ],
+      moment: 'you chose to walk away from revenue — and what that cost, and bought, you.',
+    },
+  ],
+};
+
+function App() {
+  return (
+    <DesignCanvas>
+      {/* Intro header */}
+      <div style={{
+        padding: '0 60px 48px', maxWidth: 1200,
+      }}>
+        <div style={{
+          fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase',
+          color: 'rgba(40,30,20,0.55)', fontWeight: 500, marginBottom: 10,
+        }}>Mentis Digital · Concept Review · 19 April 2026</div>
+        <div style={{
+          fontFamily: 'Fraunces, serif', fontWeight: 600,
+          fontSize: 48, lineHeight: 1.05, letterSpacing: '-0.025em',
+          color: '#1A1110', marginBottom: 16, maxWidth: 900,
+        }}>
+          The Signal — <span style={{ fontStyle: 'italic', fontWeight: 500 }}>first pass.</span>
+        </div>
+        <div style={{
+          fontFamily: 'Inter, sans-serif', fontSize: 15, lineHeight: 1.6,
+          color: 'rgba(40,30,20,0.75)', maxWidth: 720, textWrap: 'pretty',
+        }}>
+          Three artefacts to judge direction before we build out. The sub-brand
+          lives alongside the Mentis mark — not in front of it. Signature motif
+          is a layered frequency wave, reading as <em>attention</em> rather than
+          broadcast. Masthead is Fraunces italic with a gold rule: editorial,
+          not podcast-bro. Copy shown is <strong>[PLACEHOLDER]</strong> — structure
+          and hierarchy only. Guest photo is Trisden standing in for any future
+          guest until real headshots arrive.
+        </div>
+      </div>
+
+      {/* Sub-brand plate */}
+      <DCSection
+        title="01 · Sub-brand plate"
+        subtitle="The wordmark, the signature motif, and how they sit with the Mentis mark."
+      >
+        <DCArtboard label="Wordmark · on Deep Space Blue" width={520} height={320}>
+          <div style={{
+            width: '100%', height: '100%', background: '#1A3A5C',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <SignalWordmark size={1.6} color="#F2F6FB" accent="#D4980F" />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="Wordmark · on Alice Blue" width={520} height={320}>
+          <div style={{
+            width: '100%', height: '100%', background: '#F2F6FB',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <SignalWordmark size={1.6} color="#1A3A5C" accent="#D4980F" />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="Signature motif · layered frequency" width={760} height={320}>
+          <div style={{
+            width: '100%', height: '100%', background: '#1A3A5C',
+            padding: 30, boxSizing: 'border-box',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <SignalMotif width={700} height={260} color="#F2F6FB" accent="#D4980F" lineCount={9} />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="Lock-up · alongside Mentis" width={520} height={320}>
+          <div style={{
+            width: '100%', height: '100%', background: '#F2F6FB',
+            padding: 40, boxSizing: 'border-box',
+            display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+          }}>
+            <SignalWordmarkInline color="#1A3A5C" accent="#D4980F" size={1.1} />
+            <div style={{ height: 1, background: 'rgba(138,171,200,0.5)', margin: '24px 0' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <img src="brand/logo/mono-navy.svg" alt="Mentis" style={{ height: 28 }} />
+              <span style={{
+                fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase',
+                color: '#1A3A5C', opacity: 0.65, fontWeight: 500,
+              }}>A Mentis Podcast</span>
+            </div>
+          </div>
+        </DCArtboard>
+      </DCSection>
+
+      {/* Guest Pack — Cover */}
+      <DCSection
+        title="02 · Guest Pack · Cover"
+        subtitle="A4 portrait. Deep Space Blue masthead block over a split photo/metadata plate. Gold rule marks the boundary. Guest photo and name read as both document cover and magazine cover."
+      >
+        <DCArtboard label="Guest Pack · Cover · A4 portrait" width={794} height={1123}>
+          <GuestPackCover guest={GUEST} />
+        </DCArtboard>
+
+        <div style={{ position: 'relative', width: 320 }}>
+          <DCPostIt top={40} left={20} width={280} rotate={-1.5}>
+            <strong>Why this cover works for a guest pack, not a cover.</strong>
+            <div style={{ marginTop: 8 }}>
+              The top half is pure masthead — same every episode. The lower half
+              is the swap zone (headshot, name, role, dates).
+              Personalisation = 4 text fields + 1 photo. Under 2 min.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={320} left={20} width={280} rotate={1.2}>
+            <strong>Swap slots labelled.</strong>
+            <div style={{ marginTop: 8 }}>
+              Guest name · role · agency · episode # · recording date ·
+              location · release window · headshot. Everything else is fixed
+              chrome.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={580} left={20} width={280} rotate={-1}>
+            <strong>3D render spots — to fill later.</strong>
+            <div style={{ marginTop: 8 }}>
+              Cover currently uses the SVG signature motif as its texture. If
+              you want a 3D crystal/embossed mark floating behind the masthead,
+              it slots into the deep block with no layout change.
+            </div>
+          </DCPostIt>
+        </div>
+      </DCSection>
+
+      {/* Guest Pack — Interior spread */}
+      <DCSection
+        title="03 · Guest Pack · Interior spread (Three Themes)"
+        subtitle="Two A4 pages shown together. Left page sets up the section with a hero headline, a framing paragraph, and a Laws-of-The-Signal pull-quote as editorial furniture. Right page delivers the three themes with numbered column, framing italic, prompts, and a 'think about a specific moment' box."
+      >
+        <DCArtboard label="Spread · Pages 06—07" width={1588} height={1123}>
+          <ThreeThemesSpread guest={GUEST} />
+        </DCArtboard>
+
+        <div style={{ position: 'relative', width: 320 }}>
+          <DCPostIt top={40} left={20} width={280} rotate={1.5}>
+            <strong>Editorial rhythm.</strong>
+            <div style={{ marginTop: 8 }}>
+              Left page <em>breathes</em> — one headline, one framing para,
+              one pull-quote. Right page <em>delivers</em> — three dense
+              theme blocks. This pattern repeats across the pack:
+              breathe, then deliver.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={340} left={20} width={280} rotate={-1.2}>
+            <strong>Gold: 3 appearances on this spread.</strong>
+            <div style={{ marginTop: 8 }}>
+              The № glyph, the rule above the pull-quote, and the left
+              border on the &ldquo;moment&rdquo; prompt. Stays well under
+              the 5% ceiling.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={600} left={20} width={280} rotate={0.8}>
+            <strong>Numbered column is the motif.</strong>
+            <div style={{ marginTop: 8 }}>
+              Every section of the pack uses the same № + two-digit + gold
+              rule treatment. It becomes a wayfinding device for guests
+              flipping through.
+            </div>
+          </DCPostIt>
+        </div>
+      </DCSection>
+
+      {/* Social cards */}
+      <DCSection
+        title="04 · Promo pack · social card set"
+        subtitle="All four formats share the same DNA: deep field, gold hairline, Fraunces italic pull-quote, small Mentis mark. Guest photo is framed with corner marks — the 'dossier' detail you see in the Guest Pack."
+      >
+        <DCArtboard label="LinkedIn · 1200×627" width={1200} height={627}>
+          <SocialLinkedIn guest={GUEST} />
+        </DCArtboard>
+
+        <DCArtboard label="Instagram square · 1080×1080" width={1080} height={1080}>
+          <SocialIGSquare guest={GUEST} />
+        </DCArtboard>
+
+        <DCArtboard label="Instagram story · 1080×1920" width={540} height={960}
+                    style={{ background: 'transparent' }}>
+          <div style={{ width: 1080, height: 1920, transform: 'scale(0.5)', transformOrigin: '0 0' }}>
+            <SocialIGStory guest={GUEST} />
+          </div>
+        </DCArtboard>
+
+        <DCArtboard label="16:9 clip thumbnail · 1920×1080" width={1280} height={720}
+                    style={{ background: 'transparent' }}>
+          <div style={{ width: 1920, height: 1080, transform: 'scale(0.6666)', transformOrigin: '0 0' }}>
+            <SocialClip16x9 guest={GUEST} />
+          </div>
+        </DCArtboard>
+
+        <div style={{ position: 'relative', width: 320 }}>
+          <DCPostIt top={40} left={20} width={280} rotate={-1.5}>
+            <strong>Editable fields per card.</strong>
+            <div style={{ marginTop: 8 }}>
+              Episode # · guest name · role · agency · photo · pull-quote.
+              Six fields, same six on every format. Generate a pack in
+              one sitting.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={300} left={20} width={280} rotate={1}>
+            <strong>Motif appears as texture, not hero.</strong>
+            <div style={{ marginTop: 8 }}>
+              The frequency wave sits at 12–20% opacity in every deep
+              field. You only see it when you look. That's the whole idea
+              of the show name — a Signal, not a Siren.
+            </div>
+          </DCPostIt>
+          <DCPostIt top={560} left={20} width={280} rotate={-0.8}>
+            <strong>No &ldquo;listen on Spotify&rdquo; buttons.</strong>
+            <div style={{ marginTop: 8 }}>
+              Deliberate. The editorial register falls apart the moment
+              you start pasting platform badges. The caption handles
+              &ldquo;where to listen&rdquo; on social, not the artwork.
+            </div>
+          </DCPostIt>
+        </div>
+      </DCSection>
+
+      {/* Next steps */}
+      <DCSection
+        title="05 · After you've looked at these"
+        subtitle="What I'd want to resolve before full build-out."
+      >
+        <DCArtboard label="Next steps" width={720} height={480}>
+          <div style={{
+            width: '100%', height: '100%', background: '#F2F6FB',
+            padding: 40, boxSizing: 'border-box',
+            fontFamily: 'Inter, sans-serif', color: '#0F2237',
+          }}>
+            <div style={{
+              fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: '#1A3A5C', fontWeight: 500, marginBottom: 16,
+            }}>What I need from you</div>
+            <ol style={{ paddingLeft: 20, margin: 0, lineHeight: 1.6, fontSize: 14 }}>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Paste <code>the-signal-copy.md</code>.</strong>{' '}
+                Everything above is placeholder — layouts are sound but
+                lines need to be yours.
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Motif direction — confirmed?</strong>{' '}
+                Layered frequency wave. If you want the equaliser-bars or
+                concentric-rings variant instead, I'll swap globally.
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong>3D renders — supply or drop?</strong>{' '}
+                The SVG motif is doing the work now. Happy with that, or do
+                you want me to block placeholder slots for the 3D signature
+                assets and render them in later?
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Guest photo treatment.</strong>{' '}
+                Currently: full colour, slight desat, corner marks. Alternative
+                is duotone deep/alice — tell me.
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Then: full build.</strong>{' '}
+                13 guest-pack sections, release form, remaining social
+                formats. Four to five days.
+              </li>
+            </ol>
+          </div>
+        </DCArtboard>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
